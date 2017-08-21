@@ -22,6 +22,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+var sqlite3 = require('sqlite3');
+var db = new sqlite3.Database('./sistema_pedido.db');
+
 app.use('/', routes);
 app.use('/articulos', articulos);
 

@@ -6,7 +6,7 @@ var db = new sqlite3.Database('sistema_pedido.db');
 
 router.get('/', function(request, response) {
     db.all("SELECT * FROM tbl_articulo", function(err, rows) {
-      console.log("GET request for articulos");
+      console.log(row);
       response.render('articulos', {
         title: 'Articulos',
         rows: rows

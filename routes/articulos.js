@@ -10,7 +10,7 @@ app.get('/', function(request, response) {
         });
     });
 });
-
+/*
 app.get('/crearArticulo', function(request, response) {
   response.render('crearArticulo');
 });
@@ -60,5 +60,5 @@ app.delete('/borrar/:referencia', function(request, response){
   db.run("DELETE FROM tbl_articulo WHERE referencia=?", [request.params.referencia]);
   response.redirect('/articulos');
 });
-
+*/
 module.exports = router;

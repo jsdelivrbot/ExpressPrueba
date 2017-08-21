@@ -1,11 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-//------------------------------------------------------------------------------
-var bodyParser = require('body-parser');
 var sqlite3 = require('sqlite3');
-var expressValidator = require('express-validator');
-//==============================================================================
 var db = new sqlite3.Database('sistema_pedido.db');
 
 router.get('/', function(request, response) {

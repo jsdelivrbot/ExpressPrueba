@@ -5,6 +5,15 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
+//------------------------------------------------------------------------------
+var bodyParser = require('body-parser');
+var sqlite3 = require('sqlite3');
+var expressValidator = require('express-validator');
+//==============================================================================
+var db = new sqlite3.Database('sistema_pedido.db');
+
+
+
 var routes = require('./routes/index');
 var articulos = require('./routes/articulos');
 

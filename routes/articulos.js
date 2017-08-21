@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-app.get('/', function(request, response, next) {
+router.get('/', function(request, response) {
     response.send('Articulos');
 });
 

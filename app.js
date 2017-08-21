@@ -8,9 +8,6 @@ var bodyParser = require('body-parser');
 var routes = require('./routes/index');
 var articulos = require('./routes/articulos');
 
-var sqlite3 = require('sqlite3');
-var db = new sqlite3.Database('sistema_pedido.db');
-
 var app = express();
 
 app.set('view engine','ejs');

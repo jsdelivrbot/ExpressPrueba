@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
+/*
 app.get('/', function(request, response) {
     db.all("SELECT * FROM tbl_articulo", function(err, rows) {
       console.log("GET request for articulos");
@@ -10,7 +11,7 @@ app.get('/', function(request, response) {
         });
     });
 });
-/*
+
 app.get('/crearArticulo', function(request, response) {
   response.render('crearArticulo');
 });

@@ -1,9 +1,11 @@
 var express = require('express');
 var router = express.Router();
+var sqlite3 = require('sqlite3');
+var db = new sqlite3.Database('./sistema_pedido.db');
 
 router.get('/', function(request, response) {
     db.all("SELECT * FROM tbl_articulo", function(err, rows) {
-      console.log(rows);
+      console.log(err);
       response.render('articulos', {
         title: 'Articulos',
         rows: rows

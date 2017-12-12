@@ -22,13 +22,16 @@ app.use('/api', api);
 
 // Send all other requests to the Angular app
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'dist/index.html'));
+    res.render(path.join(__dirname, 'dist/index.html'));
 });
 
+
+app.set('view engine', 'ejs');
+
 //Set Port
-const port = process.env.PORT || 3000;
-app.set('port', port);
+const PORT = process.env.PORT || 5000;
+app.set('port', PORT);
 
 const server = http.createServer(app);
 
-server.listen(port, () => console.log(`Running on localhost:${port}`));
+server.listen(PORT, () => console.log(`Running on localhost:${PORT}`));

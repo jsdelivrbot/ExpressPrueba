@@ -28,5 +28,5 @@ app.set('view engine', 'ejs');
 app.engine('html', require('ejs').renderFile);
 
 //app.get('/', (req, res) => res.render('pages/index'));
-app.get('/', (req, res) => res.render('pages/index.html'));
+app.get('/', (req, res) => res.render('index.html'));
 app.listen(PORT, () => console.log(`Listening on ${ PORT }`));

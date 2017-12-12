@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
-const http = require ('http');
+//const http = require ('http');
 const app = express();
 
 //MySQL
@@ -30,8 +30,10 @@ app.set('view engine', 'ejs');
 
 //Set Port
 const PORT = process.env.PORT || 5000;
-app.set('port', PORT);
+//app.set('port', PORT);
 
-const server = http.createServer(app);
+//const server = http.createServer(app);
 
-server.listen(PORT, () => console.log(`Running on localhost:${PORT}`));
+//server.listen(PORT, () => console.log(`Running on localhost:${PORT}`));
+
+app.listen(PORT, () => console.log(`Listening on ${ PORT }`));
